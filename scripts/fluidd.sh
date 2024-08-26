@@ -87,7 +87,7 @@ function install_fluidd_macros() {
     echo -e "| have Fluidd fully functional and working.             |"
     blank_line
     echo -e "| The recommended macros for Fluidd can be found here:  |"
-    echo -e "| https://github.com/Transistor427/fluidd-config           |"
+    echo -e "| https://github.com/fluidd-core/fluidd-config           |"
     blank_line
     echo -e "| If you already use these macros skip this step.       |"
     echo -e "| Otherwise you should consider to answer with 'yes' to |"
@@ -112,7 +112,7 @@ function install_fluidd_macros() {
 function download_fluidd_macros() {
   local ms_cfg_repo path configs regex line gcode_dir
 
-  ms_cfg_repo="https://github.com/Transistor427/fluidd-config.git"
+  ms_cfg_repo="https://github.com/fluidd-core/fluidd-config.git"
   regex="${HOME//\//\\/}\/([A-Za-z0-9_]+)\/config\/printer\.cfg"
   configs=$(find "${HOME}" -maxdepth 3 -regextype posix-extended -regex "${regex}" | sort)
 
@@ -494,7 +494,7 @@ function patch_fluidd_config_update_manager() {
 type: git_repo
 primary_branch: master
 path: ~/fluidd-config
-origin: https://github.com/Transistor427/fluidd-config.git
+origin: https://github.com/fluidd-core/fluidd-config.git
 managed_services: klipper
 MOONRAKER_CONF
 
